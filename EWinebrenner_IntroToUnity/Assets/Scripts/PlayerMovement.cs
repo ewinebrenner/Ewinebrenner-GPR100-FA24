@@ -9,6 +9,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 5.0f;
     [SerializeField] private LayerMask groundLayer;
     bool onGround;
+    private void Awake()
+    {
+        rb=GetComponent<Rigidbody2D>();
+    }
     private void OnDrawGizmos()
     {
         //Ternary operator ?
